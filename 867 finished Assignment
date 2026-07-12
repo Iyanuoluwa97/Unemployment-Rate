@@ -1,0 +1,168 @@
+print(seq(32,44))
+print(seq(32:44))
+print(mean(35:82))
+X<- c(2,3,5,6,7,9)
+Y<- c(3,2,5,7,8,6)
+barplot(Y, names.arg = names, main = "Bar Chart with X on x-axis and Y as heights", xlab = "X", ylab = "Y", col = "skyblue")
+names <- as.character(X)  # Use X values as category names
+# Create bar chart
+barplot(Y, names.arg = names, main = "Bar Chart with X on x-axis and Y as heights", xlab = "X", ylab = "Y", col = "skyblue")
+x<- c(10,11,12,13,14,15,15)
+print(mean(x))
+print(length(x))
+x12<- sum(x-mean(x))^2/length(x)-1
+print(x12)
+q()
+
+
+0
+print(seq(32,44))
+print(seq(32:44))
+print(mean(35:82))
+X<- c(2,3,5,6,7,9)
+Y<- c(3,2,5,7,8,6)
+barplot(Y, names.arg = names, main = "Bar Chart with X on x-axis and Y as heights", xlab = "X", ylab = "Y", col = "skyblue")
+names <- as.character(X)  # Use X values as category names
+# Create bar chart
+barplot(Y, names.arg = names, main = "Bar Chart with X on x-axis and Y as heights", xlab = "X", ylab = "Y", col = "skyblue")
+x<- c(10,11,12,13,14,15,15)
+print(mean(x))
+print(length(x))
+x12<- sum(x-mean(x))^2/length(x)-1
+print(x12)
+q()
+
+
+0
+uniform_data<-runif(1000, min=0, max=1
+uniform_data<-runif(1000, min=0, max=1
+uniform_data<-runif(1000, min=0, max=1)
+summary(uniform_data)
+hist(uniform_data, main="uniform Distribution", xlab="value")
+list(uniform_data)
+hist(uniform_data, main="uniform Distribution", xlab="value")
+n<-1000
+x<-runif(n, min=-1, max=1)
+y<-runif(n, min=-1, max=1)
+inside_circle<-sum(x^2 + y^2<=1)
+pi_estimate<-(inside_circle/n)*4
+pi_estimate
+# Set seed for reproducibility
+set.seed(123)
+ n <- 100  # sample size
+ mu <- 5   # mean
+sigma <- 2  # standard deviation
+data <- rnorm(n, mean = mu, sd = sigma)
+n_bootstrap <- 1000
+bootstrap_means <- numeric(n_bootstrap)
+bootstrap_sample <- sample(data, size = length(data), replace = TRUE)
+bootstrap_means<- mean(bootstrap_sample)
+mean_estimate <- mean(bootstrap_means)
+summary(mean_estimate)
+conf_int <- quantile(bootstrap_means, probs = c(0.025, 0.975))
+cat("Bootstrap Estimate of Mean:", mean_estimate, "\n")
+cat("95% Confidence Interval:", conf_int, "\n")
+q()
+# Load the first CSV file
+data1 <- read.csv("C:/Users/HP/Downloads/archive/gdp_data.csv")
+# Load the second CSV file
+data2 <- read.csv("C:/Users/HP/Downloads/archive/unemployment_data.csv")
+# View the structure of the first dataset
+str(data1)
+# View the structure of the second dataset
+str(data2)
+# View the first few rows of each dataset
+head(data1)
+head(data2)
+# Join the datasets on a common column, say "Country"
+merged_data <- merge(data1, data2, by="Country")
+# If the column names are different
+# merged_data <- merge(data1, data2, by.x="ColumnNameInData1", by.y="ColumnNameInData2")
+# Join the datasets on a common column, say "Country"
+merged_data <- merge(data1, data2, by="DATE")
+# If the column names are different
+# merged_data <- merge(data1, data2, by.x="ColumnNameInData1", by.y="ColumnNameInData2")
+# Perform data cleaning
+cleaned_data <- na.omit(merged_data)
+# Perform visualizations
+hist(cleaned_data$GDP, main="Histogram of GDP", xlab="GDP", col="blue", border="black")
+# Conduct a linear regression analysis
+model <- lm(UnemploymentRate ~ GDP, data=cleaned_data)
+summary(model)
+# Perform data cleaning
+cleaned_data <- na.omit(merged_data)
+# Perform visualizations
+hist(cleaned_data$GDP, main="Histogram of GDP", xlab="GDP", col="blue", border="black")
+# Conduct a linear regression analysis
+model <- lm(UNRATE ~ GDP, data=cleaned_data)
+summary(model)
+save.image("C:\\Users\\HP\\OneDrive\\Documents\\Assignment")
+q()
+data1 <- read.csv("C:/Users/HP/Downloads/archive/gdp_data.csv")
+data2 <- read.csv("C:/Users/HP/Downloads/archive/unemployment_data.csv")
+# View the structure of the first dataset
+str(data1)
+ # View the structure of the second dataset
+str(data2)
+# View the first few rows of each dataset
+head(data1)
+head(data2)
+# Join the datasets on a common column, say "DATE"
+merged_data <- merge(data1, data2, by="DATE")
+# Perform data cleaning
+cleaned_data <- na.omit(merged_data)
+# Perform visualizations
+ hist(cleaned_data$GDP, main="Histogram of GDP", xlab="GDP", col="blue", border="black")
+# Assuming 'UnemploymentRate' is a column in your dataset
+boxplot(data2$UnemploymentRate, 
+        main="Boxplot of Unemployment Rate", 
+        ylab="Unemployment Rate", 
+        col="orange")
+boxplot(data2$UNRATE, 
+        main="Boxplot of Unemployment Rate", 
+        ylab="UNRATE", 
+        col="orange")
+# Creating scatter plot
+plot(merged_data$GDP, merged_data$UnemploymentRate, 
+     main="GDP vs Unemployment Rate", 
+     xlab="GDP", 
+     ylab="UNRATE", 
+     pch=19,  # Use solid circle for points
+     col="red")
+# Histogram of GDPhist(data1$GDP,      main="Histogram of GDP",      xlab="GDP",      col="blue",      border="black",      breaks=20)# Boxplot of Unemployment Rateboxplot(data2$UnemploymentRate,         main="Boxplot of Unemployment Rate",         ylab="UNRATE",         col="orange")# Scatter plot of GDP vs Unemployment Rateplot(merged_data$GDP, merged_data$UnemploymentRate,      main="GDP vs Unemployment Rate",      xlab="GDP",      ylab="UNRATE",      pch=19,      col="red")
+# Conduct a linear regression analysis
+model <- lm(UNRATE ~ GDP, data=cleaned_data)
+summary(model)
+boxplot(data2$UnemploymentRate, 
+        main="Boxplot of Unemployment Rate", 
+        ylab="UNRATE", 
+        col="orange")
+# Remove rows with NA values in GDP or UNRATE
+cleaned_data <- na.omit(merged_data)
+# Alternatively, if you want to remove NAs only from specific columns
+cleaned_data <- merged_data[!is.na(merged_data$GDP) & !is.na(merged_data$UNRATE), ]
+# Create the scatter plot after cleaning the data
+plot(cleaned_data$GDP, cleaned_data$UNRATE, 
+     main="GDP vs Unemployment Rate", 
+     xlab="GDP", 
+     ylab="UNRATE", 
+     pch=19, 
+     col="red")
+# Create the scatter plot
+plot(cleaned_data$GDP, cleaned_data$UNRATE, 
+     main="GDP vs Unemployment Rate", 
+     xlab="GDP", 
+     ylab="UNRATE", 
+     pch=19, 
+     col="red")
+boxplot(data2$UnemploymentRate, 
+        main="Boxplot of Unemployment Rate", 
+        ylab="UNRATE", 
+        col="orange")
+# Remove rows with NA or infinite values in UNRATE
+data2_clean <- data2[!is.na(data2$UNRATE) & !is.infinite(data2$UNRATE), ]
+# Plot using the cleaned data
+boxplot(data2_clean$UNRATE, 
+        main="Boxplot of Unemployment Rate", 
+        ylab="UNRATE", 
+        col="orange")
