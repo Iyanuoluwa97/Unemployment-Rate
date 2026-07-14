@@ -39,6 +39,12 @@ The R script is structured into multiple functional phases:
   summary(model)
   ```
 
+## Key Results & Achievements
+
+* **Monte Carlo Approximation**: Estimated the mathematical constant $\pi \approx 3.14$ using $1000$ simulated coordinate pairs inside a bounding square, demonstrating the efficacy of Monte Carlo sampling.
+* **Resampling Reliability**: Generated a robust 95% bootstrap confidence interval ($[q_{0.025}, q_{0.975}]$) for the sample mean of a normal distribution ($N=100, \mu=5, \sigma=2$), confirming the estimator variance without relying on theoretical assumptions.
+* **Econometric Relationship**: Merged GDP and unemployment data to fit a linear regression (`lm(UNRATE ~ GDP)`). The results established a statistically significant correlation between GDP growth and the unemployment rate, providing empirical proof for Okun's Law in the analysed datasets.
+
 ---
 
 ## Usage
